@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Time</title>
+    <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <!-- include moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- firebase reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+</head>
+<style>
+    .form-class {
+        border: 1px solid grey;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+
+<body>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Anytime is Train Time</h1>
+                    <p class="lead">Choo. Choo. Chee. Chee.</p>
+                </div>
+            </div>
+        </div>
+        <!-- close jumbotron row -->
+    </div>
+    <!-- ////////////////////////////////////////////////////////// -->
+    <div class="container">
+        <div class="row form-class">
+            <div class="col-md-12">
+                <h4>Add Train</h4>
+                <hr>
+                <form>
+                    <div class="form-group">
+                        <label for="inputTrainName">Train Name</label>
+                        <input type="text" class="form-control" id="inputTrainName" placeholder="Train Name">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDestination">Destination</label>
+                        <input type="text" class="form-control" id="inputDestination" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTrainTime">First Train Time (HH:mm - military time)</label>
+                        <input type="time" class="form-control" id="inputTrainTime" placeholder="First Train time">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFrequency">Frequency (minutes)</label>
+                        <input type="number" class="form-control" id="inputFrequency" placeholder="Train Frequency">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </form>
+            </div>
+            <!-- close form row -->
+        </div>
+        <!-- /////////////////////////////////////////////////////////// -->
+        <div class="row form-class">
+            <div class="col-md-12">
+                <h4>Current Train Schedule</h4>
+                <hr>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trainRow">
+                        <tr>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            
+                        </tr>
+
+                    </tbody>
+                </table>
+                <!-- close current employees col -->
+            </div>
+            <!-- close current employees col -->
+        </div>
+        <!-- close container -->
+    </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
